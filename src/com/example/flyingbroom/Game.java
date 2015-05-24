@@ -20,7 +20,7 @@ public class Game{
 	private LoadingScene LoadScreen;
 	private DrawView DV;
 	  
-	public Game(Context context){//Конструктор
+	public Game(Context context){
 		Log.d("IMP","ENGINE CONSTRUCTOR");
 		mx=my=0;
 		textures = new TexturePack(context);
@@ -66,7 +66,7 @@ public class Game{
 		textures.addTextures("bat1","bat2","bat3","bat4","bat5","bat6","bat7","bat8","bat9");
 	}
 
-	public void setMouseCors(int x,int y, int down){//Установка текущих координат прикосновения
+	public void setMouseCors(int x,int y, int down){
 		mx=x;
 		my=y;
 		switch(state){
@@ -77,7 +77,7 @@ public class Game{
 		}
 		
 	}
-	public void applysize(Canvas canvas){//Установка текущего размера поверхности для вывода
+	public void applysize(Canvas canvas){
 		sizeX=canvas.getWidth();
 		sizeY=canvas.getHeight();
 	}
