@@ -62,15 +62,14 @@ public class Unit extends Object{
 			 MoveY(-vspeed);
 	}
 	@Override
-	public void Draw(Canvas canvas){//Прорисовка объекта		  
-		  Matrix matrix = new Matrix();//Создание матрицы для искажений
+	public void Draw(Canvas canvas){		  
+		  Matrix matrix = new Matrix();
 		  matrix.reset();
-		  w=sx*MainActivity.Engine.sizeX;//Обновление текущих ширины и высоты битмапа, адаптированных под разрешение экрана
+		  w=sx*MainActivity.Engine.sizeX;
 		  h=sy*MainActivity.Engine.sizeY;
-		  matrix.preScale(w/width, h/height);//Масштабирование
-		  //matrix.preRotate(30, w/2, h/2);
-		  matrix.postTranslate(x, y);//Перемещение матрицы в соответствии с текущими координатами объекта
-		  canvas.drawBitmap(bmps[frame], matrix, paint);//Вывод на канвас
+		  matrix.preScale(w/width, h/height);
+		  matrix.postTranslate(x, y);
+		  canvas.drawBitmap(bmps[frame], matrix, paint);
 		  if (MainActivity.paused) return;
 		  MoveY(vspeed);
 		  if (animated && MainActivity.Engine.timer.nextFrame())
