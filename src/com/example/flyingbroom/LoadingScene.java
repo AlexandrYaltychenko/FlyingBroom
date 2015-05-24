@@ -8,7 +8,6 @@ public class LoadingScene extends Scene{
 
 	public LoadingScene(Game ENGINE) {
 		super(ENGINE);
-		// TODO Auto-generated constructor stub
 	}
 	public void RenderScene(Canvas canvas){
 		Engine.applysize(canvas);
